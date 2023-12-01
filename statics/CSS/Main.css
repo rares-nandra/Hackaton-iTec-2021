@@ -1,0 +1,525 @@
+/* 
+    This file contains all the globally used stuff like a base layer. 
+    
+    Page.html -> - main.css (code used across all pages like custom buttons or animations)
+                 - Page.css (code that is specific for that page and that page only wich is not included in the other pages)
+*/
+
+/*************************************** | Fonts | ****************************************/
+
+:root 
+{
+    --TitleBigSize: 55px;
+    --TitleBigWeight: 600;
+
+    --TitleMediumSize: 45px;
+    --TitleMediumWeight: 550;
+
+    --TitleSmallSize: 40px;
+    --TitleSmallWeight: 550;
+
+    --TextBigSize: 30px;
+    --TextBigWeight: 500;
+
+    --TextMediumSize: 22px;
+    --TextMediumWeight: 500;
+
+    --TextSmallSize: 18px;
+    --TextSmallWeight: 500;
+
+    --FontSizeIconBig: 40px;
+    --FontSizeIconMedium: 30px;
+    --FontSizeIconSmall: 20px; 
+    --FontSizeIconTiny: 13px; 
+    
+    --FontSizeMenuItem: 16px;
+    --FontWeightMenuItem: 550;
+}
+
+.TitleBig
+{
+    font-size: var(--TitleBigSize);
+    font-weight: var(--TitleBigWeight);    
+    color: var(--TextPrimary);
+}
+
+.TitleMedium
+{
+    font-size: var(--TitleMediumSize);
+    font-weight: var(--TitleMediumWeight);
+    color: var(--TextPrimary);
+}
+
+.TitleSmall
+{
+    font-size: var(--TitleSmallSize);
+    font-weight: var(--TitleSmallWeight);
+    color: var(--TextPrimary);
+}
+
+.TextBig
+{
+    font-size: var(--TextBigSize);
+    font-weight: var(--TextBigWeight);
+    color: var(--TextPrimary); 
+}
+
+.TextMedium
+{
+    font-size: var(--TextMediumSize);
+    font-weight: var(--TextMediumWeight);
+    color: var(--TextPrimary); 
+}
+
+.TextSmall
+{
+    font-size: var(--TextSmallSize);
+    font-weight: var(--TextSmallWeight);
+    color: var(--TextPrimary); 
+}
+
+/*************************************** | Colors | ****************************************/
+
+:root 
+{
+    --BackgroundDarkPrimary: #121212;
+    --BackgroundDarkSecondary: #242424;
+    --BackgroundLightPrimary: #ffffff;
+    --BackgroundLightSecondary: #cccccc;
+
+    --AccentPrimary: #2375fa;  
+    --AccentSecondary: #000000;
+
+    --TextPrimary: #121212;
+    --TextSecondary: #ffffff;
+    
+    --Gradient: linear-gradient(to bottom right, rgb(70, 183, 248), rgb(43, 75, 255));
+    --GradientHover: linear-gradient(to bottom left, rgb(70, 183, 248), rgb(43, 75, 255));
+}
+
+/*************************************** | Global Elements | ****************************************/
+
+body
+{
+    background-image: var(--Gradient);
+    font-family: Montserrat;
+    overflow-x: hidden;
+}
+
+i
+{
+    font-family: "FontAwesome";
+}
+
+/*************************************** | Global Classes | ****************************************/
+
+.Debug
+{
+    border: 2px solid red;
+}
+
+.Debug2
+{
+    border: 1px solid transparent;
+}
+
+.Invisible
+{
+    display: none;
+}
+
+.GradientBorder
+{
+    padding: 2px;
+    background: var(--Gradient);
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.GradientBorder:hover 
+{
+    background: var(--GradientHover);
+}
+
+.vertical-center 
+{
+    min-height: 100%;
+    min-height: 100vh; 
+  
+    display: flex;
+    align-items: center;
+}
+  
+
+/*************************************** | Backgrounds | ****************************************/
+
+.BackgroundDarkPrimary
+{
+    background-color: var(--BackgroundDarkPrimary);
+}
+
+.BackgroundDarkSecondary
+{
+    background-color: var(--BackgroundDarkSecondary);
+}
+
+.BackgroundLightPrimary
+{
+    background-color: var(--BackgroundLightPrimary);
+}
+
+.BackgroundLightSecondary
+{
+    background-color: var(--BackgroundLightSecondary);
+}
+
+.BackgroundAccentPrimary
+{
+    background-color: var(--AccentPrimary);
+}
+
+.BackgroundGradientPrimary
+{
+    background: var(--Gradient);
+}
+
+.BackgroundImage
+{
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.BackgroundImageFullscreen
+{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/*************************************** | Custom Elements | ****************************************/
+
+/* Custom Rounded Buttons */
+
+.ButtonRoundedBig, .ButtonRoundedMedium, .ButtonRoundedSmall
+{
+    background: var(--Gradient);
+    border-radius: 50px;
+    display: inline-block;
+    cursor: pointer;
+    color: var(--TextPrimary);
+    text-decoration: none;
+}
+
+.ButtonRoundedSmall
+{
+    padding: 4px 10px;
+}
+
+.ButtonRoundedMedium
+{
+    padding: 5px 30px;
+}
+
+.ButtonRoundedBig
+{
+    padding: 10px 60px;
+}
+
+.ButtonRoundedBig:hover, .ButtonRoundedMedium:hover, .ButtonRoundedSmall:hover
+{
+    color: var(--TextPrimary);
+}
+
+/* Custom Transparent Rectangle Buttons */
+
+.ButtonTransparentBig, .ButtonTransparentMedium, .ButtonTransparentSmall
+{
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid white;
+    display: inline-block;
+    cursor: pointer;
+    color: var(--TextPrimary);
+    text-decoration: none;
+}
+
+.ButtonTransparentSmall
+{
+    padding: 4px 10px;
+    padding-right: 20px;
+}
+
+.ButtonTransparentMedium
+{
+    padding: 7px 25px;
+    padding-right: 35px;
+}
+
+.ButtonTransparentBig
+{
+    padding: 10px 60px;
+    padding-right: 70px;
+}
+
+.ButtonTransparentBig:hover, .ButtonTransparentMedium:hover, .ButtonTransparentSmall:hover
+{
+    color: var(--TextPrimary);
+}
+
+/*************************************** | Animations | ****************************************/
+
+/* Element size increase on Hover */
+
+@media(min-width: 800px)
+{
+    .AnimationIncrease0, .AnimationIncrease1, .AnimationIncrease2, .AnimationIncrease3, .AnimationIncrease4
+    {
+        transition: transform 0.2s;
+    }
+
+    .AnimationIncrease0:hover, .AnimationIncrease1:hover, .AnimationIncrease2:hover, .AnimationIncrease3:hover, .AnimationIncrease4
+    {
+        opacity: 80%;
+    }
+
+    .AnimationIncrease0:hover
+    {
+        transform: scale(1.05);
+    }
+
+    .AnimationIncrease1:hover
+    {
+        transform: scale(1.1);
+    }
+
+    .AnimationIncrease2:hover
+    {
+        transform: scale(1.15);
+    }
+
+
+    .AnimationIncrease3:hover
+    {
+        transform: scale(1.25);
+    }
+
+    .AnimationIncrease4:hover
+    {
+        transform: scale(1.35);
+    }
+}
+
+/* Element fades in */
+
+.AnimationFadeIn0, .AnimationFadeIn1, .AnimationFadeIn2, .AnimationFadeIn3
+{
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+
+.AnimationFadeIn0
+{
+    animation: AnimationFadeIn ease 1.5s;
+}
+
+.AnimationFadeIn1
+{
+    animation: AnimationFadeIn ease 2.5s;
+}
+
+.AnimationFadeIn2
+{
+    animation: AnimationFadeIn ease 3.5s;
+}
+
+.AnimationFadeIn3
+{
+    animation: AnimationFadeIn ease 4.5s;
+}
+
+@keyframes AnimationFadeIn 
+{ 
+    0% 
+    { 
+        opacity: 0; 
+    } 
+    
+    100% 
+    { 
+        opacity: 1; 
+    } 
+} 
+
+/* Underline from left to right on Hover */
+
+@media(min-width: 800px)
+{
+  .AnimationUnderline
+  {
+    background-image: linear-gradient(var(--TextSecondary), var(--TextSecondary));
+    background-position: 0% 77.5%;
+    background-position-y: 35px;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 0.5s;
+  }
+  
+  .AnimationUnderline:hover 
+  {
+    background-size: 100% 2px;
+    color: var(--TextSecondary);
+  }
+}
+
+/* Gradient Animation */
+
+.GradientAnimation
+{
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 4.5s ease infinite;
+    -moz-animation: AnimationName 4.5s ease infinite;
+    -o-animation: AnimationName 4.5s ease infinite;
+    animation: AnimationName 4.5s ease infinite;
+}
+
+@-webkit-keyframes AnimationName 
+{
+    0%
+    {
+        background-position: 0% 14%
+    }
+
+    50%
+    {
+        background-position: 100% 87%
+    }
+
+    100%
+    {
+        background-position: 0% 14%
+    }
+}
+
+@-moz-keyframes AnimationName 
+{
+    0%
+    {
+        background-position: 0% 14%
+    }
+    
+    50%
+    {
+        background-position: 100% 87%
+    }
+
+    100%
+    {
+        background-position: 0% 14%
+    }
+}
+
+@-o-keyframes AnimationName 
+{
+    0%
+    {
+        background-position: 0% 14%
+    }
+
+    50%
+    {
+        background-position: 100% 87%
+    }
+
+    100%
+    {
+        background-position: 0% 14%
+    }
+}
+
+@keyframes AnimationName 
+{
+    0%
+    {
+        background-position: 0% 14%
+    }
+    
+    50%
+    {
+        background-position: 100% 87%
+    }
+    
+    100%
+    {
+        background-position: 0% 14%
+    }
+}
+
+/*************************************** | Navbar | ****************************************/
+
+#Navbar
+{
+    height: 60px;
+    -webkit-box-shadow: 0 1px 5px 1px black;
+    -moz-box-shadow: 0 1px 5px 1px black;
+    box-shadow: 0 1px 5px 1px black;
+}
+
+#NavbarMenu
+{
+    margin-left: auto;
+}
+
+@media (max-width: 767px) 
+{
+    .navbar-collapse
+    {
+        padding-bottom: 30px;
+        padding-left: 15px;
+        padding-top: 5px;
+    }
+}
+
+#NavbarLogo
+{
+    padding-left: 15px;
+}
+
+#PhoneMenuToggler
+{
+    padding-right: 15px;
+}
+
+#PhoneMenuIcon
+{
+    color: var(--TextSecondary);
+    font-size: var(--FontSizeIconMedium);
+}
+
+.nav-item
+{
+    margin-right: 10px;
+}
+
+.nav-link
+{
+    color: var(--TextSecondary);
+    font-size: var(--FontSizeMenuItem);
+    font-weight: var(--FontWeightMenuItem); 
+    display: block;  
+}
+
+#ProfileLink
+{
+    background-image: var(--Gradient);
+    font-size: var(--FontSizeMenuItem);
+    font-weight: var(--FontWeightMenuItem);  
+    margin-top: 5px;
+    margin-right: 10px;
+    color: var(--TextSecondary);
+}
+
+#PhoneIcon
+{
+    font-size: var(--FontSizeIconTiny);
+}

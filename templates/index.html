@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Meta tags -->
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">
+    <meta name = "language" content = "RO">
+    <meta name = "description" content = "Itec WebDev">
+    <meta name = "author" content = "DeGru">
+    <meta http-equiv = "Expires" content = "0">
+    <meta name = "theme-color" content = "#121212">
+    <meta name = "msapplication-navbutton-color" content = "#121212">
+    <meta name = "apple-mobile-web-app-status-bar-style" content = "#121212">
+    <meta name = "apple-mobile-web-app-capable" content = "yes">
+    <meta name = "mobile-web-app-capable" content = "yes">
+    <meta http-equiv = "Cache-Control" content = "cache"> 
+
+    <!-- Page Title and Favicon -->
+    <title>DeGru - Search</title>
+    <link rel = "icon" type = "image/png" href = "../statics/Images/Logo.png">
+
+    <!-- JQuerry-->
+    <script src = "../statics/ThirdParty/JQuery/Jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href = "../statics/ThirdParty/Bootstrap/css/bootstrap.min.css" rel = "stylesheet" type = "text/css">
+    <script src = "../statics/ThirdParty/Bootstrap/js/bootstrapmin.js"></script>
+
+    <!-- Custom Fonts and icons -->
+    <link href = "https://fonts.googleapis.com/css?family=Montserrat:400,700" rel = "stylesheet" type = "text/css" crossorigin>
+    <link href = "../statics/ThirdParty/FontAwesome/css/all.min.css" rel = "stylesheet" type = "text/css">
+
+    <!-- CSS -->
+    <link href = "../statics/CSS/Main.css" rel = "stylesheet">
+    <link href = "../statics/CSS/index.css" rel = "stylesheet">
+
+    <!-- Javascript -->
+    <script>
+        var SessionId = "{{ session }}";
+    </script>
+    <script src = "../statics/JS/Main.js"></script>
+    <script src = "../statics/JS/index.js"></script>
+
+    
+</head>
+
+<body onload = "CreateCookie()">
+    <!-- Top Navigation Bar -->
+    <nav class = "navbar navbar-expand-md fixed-top BackgroundAccentPrimary" id = "Navbar">  
+
+        <!-- Logo -->
+        <a class = "navbar-brand" href = "#" id = "NavbarLogo">
+            <img class = "AnimationIncrease1" src = "../statics/Images/Logo.png" alt = "" height = "40" width = "40" loading = "lazy">
+        </a>
+
+        <!-- Phone Menu Toggle -->
+        <ButtonRounded type = "ButtonRounded" class = "navbar-toggler" data-toggle = "collapse" data-target = "#NavbarCollapse" id = "PhoneMenuToggler">
+            <i class = "fas fa-bars" id = "PhoneMenuIcon"></i>
+        </ButtonRounded>
+
+        <!-- Navigation Bar Menu -->
+        <div class = "collapse navbar-collapse BackgroundAccentPrimary" id = "NavbarCollapse">           
+            <ul class = "navbar-nav" id = "NavbarMenu">
+                <li class = "nav-item">
+                    <a class = "nav-link AnimationUnderline" id = "Search" href = "#">Search <i class = "fas fa-search"></i></a>
+                </li>
+
+                <li class = "nav-item">
+                    <a class = "ButtonRoundedSmall AnimationIncrease1" id = "ProfileLink" href = "/profile">Profile <i class = "fas fa-user" id = "PhoneIcon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Page Search Section -->
+    <section id = "SearchSection">
+        <div class = "container-fluid">
+            <div class = "row text-center" id = "SearchRow">
+                <div class = "row" id = "TitleRow">
+                    <h1 class = "TitleMedium" id = "Title">Search and plan your ideal vacation with DeGru</h1>
+                </div>
+
+                <div class = "text-center" id = "SearchContainer">
+                    <div class = "row SearchRow">
+                        <label class = "SearchLabel TextBig" id = "LabelVacationType">Vacation Type <i class = "fas fa-umbrella-beach"></i></label>
+                        <select class = "SearchInput TextMedium" id = "InputVacationType">
+                            <option value = "Beach">Beach</option>
+                            <option value = "Mountain">Mountain</option>
+                            <option value = "City-break">City-break</option>
+                        </select>
+                    </div>
+
+                    <div class = "row SearchRow">
+                        <label class = "SearchLabel TextBig" id = "LabelDateStart">First Day <i class = "fas fa-calendar"></i></label>
+                        <input class = "SearchInput TextMedium" id = "InputDateStart" type = "date">
+                    </div>
+
+                    <div class = "row SearchRow">
+                        <label class = "SearchLabel TextBig" id = "LabelDayNumber">Day Number <i class = "fas fa-calendar"></i></label>
+                        <input class = "SearchInput TextMedium" id = "InputDayNumber" type = "number" min = "1">
+                    </div>
+
+                    <div class = "row SearchRow">
+                        <label class = "SearchLabel TextBig" id = "LabelCovid">How important is Covid safety? (1 - 10) <i class = "fas fa-virus"></i></label>
+                        <input class = "SearchInput TextMedium" id = "InputCovid" type = "number" min = "1" max = "10">
+                    </div>
+
+                    <div class = "row SearchRow" id = "SearchButton">
+                        <h1 class = "TextBig" style = "color: red;" id = "Error"></h1>
+                    </div>
+
+                    <div class = "row SearchRow" id = "SearchButton">
+                        <div>
+                            <button class = "ButtonRoundedBig AnimationIncrease0" id = "SearchButton" type = "submit" onclick = "SendSearch();">Search <i class = "fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "row" id = "SearchResultRow">
+            
+            </div>
+        </div>
+    </section>
+</body>

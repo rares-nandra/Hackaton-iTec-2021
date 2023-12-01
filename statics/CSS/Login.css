@@ -1,0 +1,95 @@
+/* 
+    This file contains all the locally used stuff. 
+    
+    Page.html -> - main.css (code used across all pages like custom buttons or animations)
+                 - Page.css (code that is specific for that page and that page only wich is not included in the other pages)
+*/
+
+#LoginContainer
+{
+    margin-top: -7.5vh;
+    max-width: 600px;
+    width: 90vw;
+}
+
+#LoginLogoRow
+{
+    margin-bottom: 5vh;    
+}
+
+@media(max-height: 820px)
+{
+    #LoginContainer
+    {
+        margin-top: 20vh;
+        margin-bottom: 20vh;
+    }
+}
+
+@media(max-height: 400px)
+{
+    #LoginContainer
+    {
+        margin-top: 35vh;
+        margin-bottom: 35vh;
+    }
+}
+
+#LoginLogo
+{
+    margin-left: calc(50% - 60px);
+    height: 120px;
+    width: auto;
+}
+
+.FormInput
+{
+    margin-bottom: 4.5vh;
+    width: 80%;
+    margin-left: 10%;
+    background-color: var(--BackgroundLightPrimary);
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.FormLabel
+{
+    margin-bottom: 2.5vh;
+}
+
+#LoginButton
+{
+    border: none;
+    color: var(--TextSecondary);
+}
+
+#FormLoginSwitchButton
+{
+    margin-top: 3.5vh;
+}
+
+#LoginSwitchButton
+{
+    background-color: var(--BackgroundLightPrimary);
+    color: var(--AccentPrimary);
+    border: none;
+}
+
+#FormRememberMe
+{
+    margin-left: -20px;
+    margin-top: 2.5vh;
+}
+
+#RememberMe
+{
+    -ms-transform: scale(1.5); 
+    -moz-transform: scale(1.5); 
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+    margin-top: 11px;
+    margin-left: 10px;
+    position: absolute;
+}

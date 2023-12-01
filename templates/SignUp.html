@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Meta tags -->
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">
+    <meta name = "language" content = "RO">
+    <meta name = "description" content = "Itec WebDev">
+    <meta name = "author" content = "DeGru">
+    <meta http-equiv = "Expires" content = "0">
+    <meta name = "theme-color" content = "#121212">
+    <meta name = "msapplication-navbutton-color" content = "#121212">
+    <meta name = "apple-mobile-web-app-status-bar-style" content = "#121212">
+    <meta name = "apple-mobile-web-app-capable" content = "yes">
+    <meta name = "mobile-web-app-capable" content = "yes">
+    <meta http-equiv = "Cache-Control" content = "cache"> 
+
+    <!-- Page Title and Favicon -->
+    <title>DeGru - Sign up</title>
+    <link rel = "icon" type = "image/png" href = "../statics/Images/Logo.png">
+
+    <!-- JQuerry-->
+    <script src = "../statics/ThirdParty/JQuery/Jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href = "../statics/ThirdParty/Bootstrap/css/bootstrap.min.css" rel = "stylesheet" type = "text/css">
+    <script src = "../statics/ThirdParty/Bootstrap/js/bootstrapmin.js"></script>
+
+    <!-- Custom Fonts and icons -->
+    <link href = "https://fonts.googleapis.com/css?family=Montserrat:400,700" rel = "stylesheet" type = "text/css" crossorigin>
+    <link href = "../statics/ThirdParty/FontAwesome/css/all.min.css" rel = "stylesheet" type = "text/css">
+
+    <!-- CSS -->
+    <link href = "../statics/CSS/Main.css" rel = "stylesheet">
+    <link href = "../statics/CSS/SignUp.css" rel = "stylesheet">
+
+    <!-- Javascript -->
+    <script src = "../statics/JS/Main.js"></script>
+    <script src = "../statics/JS/SignUp.js"></script>
+</head>
+
+<body class = "GradientAnimation">
+    <!-- SignUp Section -->
+    <section id = "SignUpSection">
+        <div class = "container-fluid vertical-center BackgroundImageFullscreen" id = "SignUpPageContainer" style = "background-image: url(../statics/Images/LoginBackground.svg);">
+            <div class = "container" id = "SignUpContainer">
+                <!-- SignUp Logo -->
+                <div class = "row text-center SignUpRow" id = "SignUpLogoRow">
+                    <img class = "AnimationIncrease0" id = "SignUpLogo" src = "../statics/Images/Logo.png">
+                </div>
+
+                <!-- SignUp Form -->
+                <div class = "row SignUpRow text-center" id = "FormRow">
+                    <form action = "/verify-signup" method = "POST" id = "Form">                    
+                        <div class = "row FormRow" id = "FormUsername">
+                            <label class = "FormLabel TextMedium" id = "LabelUsername">Username <i class = "fas fa-user"></i></label>
+                            <input class = "FormInput TextSmall" id = "InputUsername" type = "text" name = "Username" required>
+                        </div>
+
+                        <div class = "row FormRow" id = "FormPassword">
+                            <label class = "FormLabel TextMedium" id = "LabelPassword">Password <i class = "fas fa-lock AnimationIncrease1" id = "PasswordIcon"></i></label>
+                            <input class = "FormInput TextSmall" id = "InputPassword" type = "password" name = "Password" required>
+                        </div>
+
+                        <div class = "row FormRow" id = "FormPassword">
+                            <label class = "FormLabel TextMedium" id = "LabelPassword">Confirm Password <i class = "fas fa-lock AnimationIncrease1" id = "ConfirmPasswordIcon"></i></label>
+                            <input class = "FormInput TextSmall" id = "InputPassword" type = "password" name = "ConfirmPassword" required>
+                        </div>
+                        
+                        {% if error %}
+                            <h1 class = "TextBig" style = "color: red;">{{ error }}</h1>
+                        {% endif %}
+
+                        <div class = "row FormRow" id = "FormSignUpButton">
+                            <div>
+                                <button class = "ButtonRoundedBig AnimationIncrease0" id = "SignUpButton" type = "submit" onclick = "CreateCookie();">Sign up</button>
+                            </div>
+                        </div>
+
+                        <div class = "Row FormRow" id = "FormRememberMe">
+                            <p class = "TextMedium">Remember me <input id = "RememberMe" type = "checkbox"></p>
+                        </div>
+                    </form>
+
+                    <div class = "row FormRow" id = "FormSignUpSwitchButton">
+                        <div>
+                            <a class = "CustomLink" id = "SignUpSwitchButton" href = "Login.html" >Already have an account? Login </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>

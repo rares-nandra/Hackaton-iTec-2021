@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Meta tags -->
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">
+    <meta name = "language" content = "RO">
+    <meta name = "description" content = "Itec WebDev">
+    <meta name = "author" content = "DeGru">
+    <meta http-equiv = "Expires" content = "0">
+    <meta name = "theme-color" content = "#121212">
+    <meta name = "msapplication-navbutton-color" content = "#121212">
+    <meta name = "apple-mobile-web-app-status-bar-style" content = "#121212">
+    <meta name = "apple-mobile-web-app-capable" content = "yes">
+    <meta name = "mobile-web-app-capable" content = "yes">
+    <meta http-equiv = "Cache-Control" content = "cache"> 
+
+    <!-- Page Title and Favicon -->
+    <title>DeGru - Profile</title>
+    <link rel = "icon" type = "image/png" href = "../statics/Images/Logo.png">
+
+    <!-- JQuerry-->
+    <script src = "../statics/ThirdParty/JQuery/Jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href = "../statics/ThirdParty/Bootstrap/css/bootstrap.min.css" rel = "stylesheet" type = "text/css">
+    <script src = "../statics/ThirdParty/Bootstrap/js/bootstrapmin.js"></script>
+
+    <!-- Custom Fonts and icons -->
+    <link href = "https://fonts.googleapis.com/css?family=Montserrat:400,700" rel = "stylesheet" type = "text/css" crossorigin>
+    <link href = "../statics/ThirdParty/FontAwesome/css/all.min.css" rel = "stylesheet" type = "text/css">
+
+    <!-- CSS -->
+    <link href = "../statics/CSS/Main.css" rel = "stylesheet">
+    <link href = "../statics/CSS/Profile.css" rel = "stylesheet">
+
+    <!-- Javascript -->
+    <script src = "../statics/JS/Main.js"></script>
+    <script src = "../statics/JS/Profile.js"></script>
+
+    
+</head>
+
+<body onclick = "GetSaved();">
+    <!-- Top Navigation Bar -->
+    <nav class = "navbar navbar-expand-md fixed-top BackgroundAccentPrimary" id = "Navbar">  
+
+        <!-- Logo -->
+        <a class = "navbar-brand" href = "#" id = "NavbarLogo">
+            <img class = "AnimationIncrease1" src = "../statics/Images/Logo.png" alt = "" height = "40" width = "40" loading = "lazy">
+        </a>
+
+        <!-- Phone Menu Toggle -->
+        <ButtonRounded type = "ButtonRounded" class = "navbar-toggler" data-toggle = "collapse" data-target = "#NavbarCollapse" id = "PhoneMenuToggler">
+            <i class = "fas fa-bars" id = "PhoneMenuIcon"></i>
+        </ButtonRounded>
+
+        <!-- Navigation Bar Menu -->
+        <div class = "collapse navbar-collapse BackgroundAccentPrimary" id = "NavbarCollapse">           
+            <ul class = "navbar-nav" id = "NavbarMenu">
+                <li class = "nav-item">
+                    <a class = "nav-link AnimationUnderline" id = "Search" href = "index.html">Search <i class = "fas fa-search"></i></a>
+                </li>
+
+                <li class = "nav-item">
+                    <a class = "ButtonRoundedSmall AnimationIncrease1" id = "ProfileLink" href = "#">Profile <i class = "fas fa-user" id = "PhoneIcon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section id = "ProfileSection">
+        <div class = "container-fluid" id = "ProfilePageContainer">
+            <div class = "container" id = "ProfileContainer">
+                <div class = "row text-center">
+                    <h1 class = "TitleSmall" style = "color: black;">Welcome !</h1>
+                </div>
+                
+                <div class = "row text-center">
+                    <div class = "SavedContainer" id = "SavedResultRow">
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>

@@ -1,0 +1,304 @@
+/* 
+    This file contains all the locally used stuff. 
+    
+    Page.html -> - main.css (code used across all pages like custom buttons or animations)
+                 - Page.css (code that is specific for that page and that page only wich is not included in the other pages)
+*/
+
+body
+{
+    background-color: var(--BackgroundLightPrimary);
+    background-image: none;
+    font-family: Montserrat;
+    overflow-x: hidden;
+}
+
+#SearchSection
+{
+    margin-top: calc(60px + 10vh);
+}
+
+#SearchContainer
+{
+    margin-bottom: 10vh;
+    width: 90vw;
+    max-width: 800px;
+    border: 2px solid var(--AccentPrimary);
+    border-radius: 15px;
+    padding: 20px;
+    margin-left: calc(50% - 400px);
+}
+
+.SearchLabel
+{
+    margin-bottom: 1.5vh;
+}
+
+#SearchButton
+{
+    border: none;
+    outline: none;
+    color: var(--TextSecondary);
+}
+
+@media(max-width: 888px)
+{
+    #SearchContainer
+    {
+        margin-left: 5vw;
+    }
+
+    #Title
+    {
+        font-size: 40px;
+    }
+
+    .SearchLabel
+    {
+        font-size: 20px;
+        margin-bottom: 2.5vh;
+    }
+}
+
+#TitleRow
+{
+    margin-bottom: 5vh;
+}
+
+.SearchRow
+{
+    margin-bottom: 2vh;
+}
+
+.ResultReadMore
+{
+    background-color: var(--AccentPrimary);
+    color: var(--TextSecondary);
+}
+
+.ResultReadMore:hover
+{
+    color: var(--TextSecondary);
+}
+
+.ResultPost
+{
+    margin-top: 0px;
+    width: 90%;
+    margin-left: 5%;
+    height: 900px;
+}
+
+.ResultImage
+{
+    background-size: 100% 100%;
+    border-radius: 15px;
+    height: 550px;
+    max-width: 850px;
+}
+
+@media(min-width: 800px)
+{
+    .ResultImage:hover
+    {
+        opacity: 80%;
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+    }
+}
+
+.ResultImageRight
+{
+    margin-left: calc(50% - 525px);
+}
+
+.ResultImageLeft
+{
+    margin-left: calc(50% - 325px);
+}
+
+.ResultTextContainer
+{
+    padding: 50px;
+    border-radius: 15px;
+    margin-top: -225px;
+    width: 600px;
+    box-shadow: -2px -5px 18px #000000;
+    position: absolute;
+}
+
+.ResultTextRight
+{
+    margin-left: calc(50% - 175px);
+}
+
+.ResultTextLeft
+{
+    margin-left: calc(50% - 625px);
+}
+
+.ResultText 
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--TextSecondary);
+}
+
+.ResultTitle
+{
+    color: var(--TextSecondary);
+}
+
+@media(max-width: 1300px)
+{
+    .ResultImage, .ResultImageLeft, .ResultImageRight, .ResultVideo, .ResultVideoLeft, .ResultVideoRight
+    {
+        margin-left: 15%;
+        width: 70%;
+        height: 500px;
+        max-width: none;
+    }
+
+    .ResultTextContainer, .ResultTextLeft, .ResultTextRight
+    {
+        position: relative;
+        margin-left: 20%;
+        margin-top: -150px;
+        max-width: none;
+        width: 60%;
+    }
+}
+
+@media(max-width: 900px)
+{
+    .ResultImage, .ResultImageLeft, .ResultImageRight
+    {
+        margin-left: 1%;
+        width: 98%;
+        height: 400px;
+        max-width: none;
+    }
+
+    .ResultTextContainer, .ResultTextLeft, .ResultTextRight
+    {
+        margin-top: -120px;
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .ResultText 
+    {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .ResultActivator
+    {
+        margin-top: -100px;
+    }
+}
+
+@media(max-width: 700px)
+{
+    .ResultImage, .ResultImageLeft, .ResultImageRight
+    {
+        height: 400px;
+    }
+
+    .ResultText 
+    {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+
+@media(max-width: 600px)
+{
+    .ResultPost
+    {
+        height: 700px;
+    }
+
+    .ResultImage, .ResultImageLeft, .ResultImageRight
+    {
+        height: 300px;
+    }
+
+    .ResultTextContainer, .ResultTextLeft, .ResultTextRight
+    {
+        margin-top: -50px;
+        width: 80%;
+        margin-left: 10%;
+        padding: 15px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .ResultActivator
+    {
+        margin-top: -275px;
+    }
+}
+
+@media(max-width: 500px)
+{
+    .ResultImage, .ResultImageLeft, .ResultImageRight, .ResultVideo, .ResultVideoLeft, .ResultVideoRight, .Video
+    {
+        height: 250px;
+    }
+
+    .ResultTextContainer, .ResultTextLeft, .ResultTextRight
+    {
+        margin-top: 0px;
+        width: 98%;
+        margin-left: 1%;
+    }
+
+    .ResultText 
+    {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+
+@media(max-width: 425px)
+{
+    .ResultImage, .ResultImageLeft, .ResultImageRight, .ResultVideo, .ResultVideoLeft, .ResultVideoRight, .Video
+    {
+        height: 200px;
+    }
+
+    .ResultTextContainer, .ResultTextLeft, .ResultTextRight
+    {
+        margin-top: 10px;
+    }
+}
+
+@media(max-width: 350px)
+{
+    .ResultImage, .ResultImageLeft, .ResultImageRight, .ResultVideo, .ResultVideoLeft, .ResultVideoRight, .Video
+    {
+        height: 160px;
+    }
+
+    .ResultTextContainer, .ResultTextLeft, .ResultTextRight
+    {
+        padding: 15px;
+    }
+
+    .ResultText
+    {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media(max-width: 300px)
+{
+    .ResultTextContainer, .ResultTextLeft, .ResultTextRight
+    {
+        padding: 12px;
+    }
+}
+
+
